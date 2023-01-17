@@ -31,8 +31,7 @@ jobs:
           docker build -t ${{ env.WEB_IMAGE }}:latest .
       - name: Push images
         run: |
-          docker push ${{ env.WEB_IMAGE }}
-          docker push ${{ env.NGINX_IMAGE }}
+          docker push ${{ env.WEB_IMAGE }}:latest
 
   deploy:
     name: Deploy to DigitalOcean
