@@ -71,5 +71,6 @@ jobs:
             cd /app
             source .env
             docker login ghcr.io -u $NAMESPACE -p $PERSONAL_ACCESS_TOKEN
+            docker pull $WEB_IMAGE
             docker compose up 
           ENDSSH
